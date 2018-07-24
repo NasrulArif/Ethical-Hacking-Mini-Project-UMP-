@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "Web Buckler",
+  "version": "1.0",
+
+  "description": "Web Buckler will protect your browsing experience by automatically detect malicious website you're going to visit.",
+
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": ["js/jquery-3.3.1.min.js", "js/detection.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+      "storage"
+  ]
+
+
+
+
+}
